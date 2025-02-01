@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Hachi Maru Pop", serif;
+}
+
+img {
+  width: auto;
+  height: 100%;
+  line-height: 0;
+  display: block;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  border: none;
+}
+
+.catalog {
+  padding: 40px 0;
+  background-color: #8a9d70;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 32px;
+  color: #fff;
+  text-align: center;
+}
+
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.catalog__item {
+  border-radius: 20px;
+  background-color: #b1c299;
+}
+
+.catalog__wrapper {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.catalog__img {
+}
+
+.catalog__block{
+    padding: 12px;
+}
+
+.catalog__header {
+    margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.catalog__subtitle {
+  color: #646f55;
+}
+
+.catalog__price {
+  color: #fff;
+}
+
+.catalog__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.catalog__text {
+  color: #fff;
+}
+
+.catalog__span {
+  color: #646f55;
+}
+
+.catalog__btn{
+    padding: 6px 0;
+    border-radius: 20px;
+    background-color: #646f55;
+    color: #fff;
+    width: 100%;
+}
