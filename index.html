@@ -40,6 +40,42 @@
     </li> -->
       </ul>
     </section>
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button type="button" class="modal__close">×</button>
+        <div class="modal__left">
+          <div class="modal__wrapper">
+            <img
+              id="modal-img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Zuywj8gFc3iM-gvaJfAEXranyDTGrXQx2g&s"
+              alt="Cat"
+              class="modal__img"
+            />
+          </div>
+          <div class="modal__header">
+            <h2 class="modal__title" id="modal-title"></h2>
+            <p class="modal__price" id="modal-price">$</p>
+          </div>
+        </div>
+        <div class="modal__right">
+          <div class="modal__info">
+            <p class="modal__text">
+              Type: <span id="modal-type" class="modal__span"></span>
+            </p>
+            <p class="modal__text">
+              Age: <span id="modal-age" class="modal__span"></span>
+            </p>
+            <p class="modal__text">
+              Gender: <span id="modal-gender" class="modal__span"></span>
+            </p>
+            <p class="modal__text">
+              Skin: <span id="modal-skin" class="modal__span"></span>
+            </p>
+          </div>
+          <p class="modal__desc" id="modal-desc"></p>
+        </div>
+      </div>
+    </div>
     <script type="module" src="./index.js"></script>
   </body>
 </html>
