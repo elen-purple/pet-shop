@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   color: #fff;
+  box-sizing: border-box;
 }
 
 *:focus {
@@ -109,14 +110,14 @@ button {
   width: 100%;
 }
 
-.is-hidden{
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.no-scroll{
-    overflow: hidden;
+.no-scroll {
+  overflow: hidden;
 }
 
 .backdrop {
@@ -134,24 +135,44 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 660px;
-  width: 100%;
+  width: calc(100% - 30px);
   background-color: #646f55;
   border-radius: 20px;
   padding: 30px;
   display: flex;
-  align-items: center;
-  gap: 40px;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 600px;
+  height: calc(100% - 30px);
+  overflow-y: auto;
 }
 
-.modal__close{
-    background-color: transparent;
-    line-height: 0;
-    font-size: 32px;
-    position: absolute;
+@media screen and (min-width: 690px) {
+  .modal {
+    max-width: 660px;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    gap: 40px;
+    flex-direction: row;
+  }
+}
+
+.modal__close {
+  background-color: transparent;
+  line-height: 0;
+  font-size: 32px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  user-select: none;
+}
+
+@media screen and (min-width: 420px) {
+  .modal__close {
     top: 32px;
     right: 32px;
-    user-select: none;
+  }
 }
 
 .modal__left {
@@ -160,12 +181,19 @@ button {
 .modal__wrapper {
   border-radius: 20px;
   overflow: hidden;
-  width: 250px;
+  max-width: 250px;
+  width: 100%;
   height: 250px;
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 690px) {
+  .modal__wrapper {
+    margin: 0 0 12px;
+  }
 }
 
 .modal__img {
@@ -206,4 +234,5 @@ button {
 .modal__desc {
   font-size: 16px;
   color: #b1c299;
+  word-break: break-all;
 }
