@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+        <symbol id="close-dagger" viewBox="0 0 30 32">
+            <path
+                d="M26.182 30.364.546 4.728l3.455-3.455 25.636 25.636-3.455 3.455zM4 30.364.545 26.909 26.181 1.273l3.455 3.455L4 30.364z" />
+        </symbol>
+    </defs>
+</svg>

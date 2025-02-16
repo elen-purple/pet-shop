@@ -20,29 +20,160 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
+    <section class="hero">
+      <h1 class="hero__title">Animal catalog</h1>
+    </section>
+    <section class="filter">
+      <div id="filter" class="filter__block closed">
+        <div id="filter-header" class="filter__header">
+          <h2 class="filter__title">Filter</h2>
+          <button id="close-btn" class="filter__close rotated">
+            <svg class="filter__dagger" width="16" height="16">
+              <use href="./icons.svg#close-dagger"></use>
+            </svg>
+          </button>
+        </div>
+        <form id="filter-form" class="filter__box">
+          <ul class="filter__list">
+            <li class="filter__item">
+              <label class="filter__label">
+                Min price
+                <input
+                  class="filter__input"
+                  id="min-price-input"
+                  type="number"
+                  placeholder="Enter price"
+                />
+              </label>
+            </li>
+            <li class="filter__item">
+              <label class="filter__label">
+                Max price
+                <input
+                  class="filter__input"
+                  id="max-price-input"
+                  type="number"
+                  placeholder="Enter price"
+                />
+              </label>
+            </li>
+            <li class="filter__item">
+              <label class="filter__label">
+                Type
+                <input
+                  class="filter__input"
+                  id="type-input"
+                  type="text"
+                  placeholder="Enter type"
+                />
+              </label>
+            </li>
+            <li class="filter__item">
+              <label class="filter__label">
+                Skin
+                <input
+                  class="filter__input"
+                  id="skin-input"
+                  type="text"
+                  placeholder="Enter skin"
+                />
+              </label>
+            </li>
+            <li class="filter__item">
+              <h3 class="filter__subtitle">Gender</h3>
+              <button type="button" id="gender-btn" class="filter__subbtn">
+                default
+              </button>
+              <ul id="gender-list" class="filter__sublist is-hidden">
+                <li class="filter__subitem">
+                  <button
+                    type="button"
+                    data-gender="default"
+                    class="filter__gender"
+                  >
+                    default
+                  </button>
+                </li>
+                <li class="filter__subitem">
+                  <button
+                    type="button"
+                    data-gender="boy"
+                    class="filter__gender"
+                  >
+                    boy
+                  </button>
+                </li>
+                <li class="filter__subitem">
+                  <button
+                    type="button"
+                    data-gender="girl"
+                    class="filter__gender"
+                  >
+                    girl
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="filter__item">
+              <label class="filter__label">
+                Min age
+                <input
+                  class="filter__input"
+                  id="min-age-input"
+                  type="number"
+                  placeholder="Enter age"
+                />
+              </label>
+            </li>
+            <li class="filter__item">
+              <label class="filter__label">
+                Max age
+                <input
+                  class="filter__input"
+                  id="max-age-input"
+                  type="number"
+                  placeholder="Enter age"
+                />
+              </label>
+            </li>
+          </ul>
+          <div class="filter__btns">
+            <button type="submit" id="submit-btn" class="filter__btn">
+              Submit
+            </button>
+            <button type="reset" id="reset-btn" class="filter__btn">
+              Reset
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
     <section class="catalog">
-      <h1 class="catalog__title">Каталог тварин</h1>
       <ul class="catalog__list" id="pet-list">
         <!-- <li class="catalog__item">
-        <div class="catalog__wrapper">
-            <img src="${image}" alt="${skin} ${type} called ${name}" class="catalog__img">
-        </div>
-        <div class="catalog__header">
-            <h2 class="catalog__subtitle">${name}</h2>
-            <p class="catalog__price">Price: ${price}$</p>
-        </div>
-        <div class="catalog__info">
-            <p class="catalog__text">Type: <span class="catalog__span">${type}</span></p>
-            <p class="catalog__text">Age: <span class="catalog__span">${age}</span></p>
-            <p class="catalog__text">Gender: <span class="catalog__span">${gender}</span></p>
-            <p class="catalog__text">Skin: <span class="catalog__span">${skin}</span></p>
-        </div>
-    </li> -->
+          <div class="catalog__wrapper">
+              <img src="${image}" alt="${skin} ${type} called ${name}" class="catalog__img">
+          </div>
+          <div class="catalog__header">
+              <h2 class="catalog__subtitle">${name}</h2>
+              <p class="catalog__price">Price: ${price}$</p>
+          </div>
+          <div class="catalog__info">
+              <p class="catalog__text">Type: <span class="catalog__span">${type}</span></p>
+              <p class="catalog__text">Age: <span class="catalog__span">${age}</span></p>
+              <p class="catalog__text">Gender: <span class="catalog__span">${gender}</span></p>
+              <p class="catalog__text">Skin: <span class="catalog__span">${skin}</span></p>
+          </div>
+        </li> -->
       </ul>
     </section>
     <div class="backdrop is-hidden">
       <div class="modal">
-        <button type="button" class="modal__close">×</button>
+        <button type="button" class="modal__close">
+          <svg class="modal__dagger" width="16" height="16">
+            <use href="./icons.svg#close-dagger"></use>
+          </svg>
+        </button>
         <div class="modal__left">
           <div class="modal__wrapper">
             <img
