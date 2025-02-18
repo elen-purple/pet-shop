@@ -337,7 +337,7 @@ petArray.forEach((pet) => {
     "beforeend",
     `<li class="catalog__item">
         <div class="catalog__wrapper">
-            <img src="${image}" alt="${skin} ${type} called ${name}" class="catalog__img">
+            <img data-src="${image}" src="./img/placeholder-${gender}.webp" alt="${skin} ${type} called ${name}" class="catalog__img">
         </div>
         <div class="catalog__block">
             <div class="catalog__header">
@@ -380,3 +380,17 @@ function toggleModal() {
   backdrop.classList.toggle("is-hidden");
   page.classList.toggle("no-scroll");
 }
+
+const lazyImage = document.querySelectorAll(`[data-src]`);
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.src = entry.target.dataset.src;
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+lazyImage.forEach((img) => {
+  observer.observe(img);
+});
