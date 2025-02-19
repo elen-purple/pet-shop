@@ -176,12 +176,7 @@
         </button>
         <div class="modal__left">
           <div class="modal__wrapper">
-            <img
-              id="modal-img"
-              src=""
-              alt="Cat"
-              class="modal__img"
-            />
+            <img id="modal-img" src="" alt="Cat" class="modal__img" />
           </div>
           <div class="modal__header">
             <h2 class="modal__title" id="modal-title"></h2>
@@ -205,6 +200,26 @@
           </div>
           <p class="modal__desc" id="modal-desc"></p>
         </div>
+      </div>
+    </div>
+    <div class="scroll">
+      <div class="scroll__container">
+        <button id="scroll-btn" type="button" class="scroll__btn">
+          <svg class="scroll__icon" width="10" height="39">
+            <use href="./icons.svg#three-points"></use>
+          </svg>
+        </button>
+        <ul id="scroll-list" class="scroll__list is-hidden">
+          <li class="scroll__item">
+            <button type="button" class="scroll__point">Sing up</button>
+          </li>
+          <li class="scroll__item">
+            <button type="button" class="scroll__point">Log in</button>
+          </li>
+          <li class="scroll__item">
+            <button type="button" class="scroll__point">Create article</button>
+          </li>
+        </ul>
       </div>
     </div>
     <script type="module" src="./index.js"></script>
