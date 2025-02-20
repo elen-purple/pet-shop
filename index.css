@@ -292,6 +292,7 @@ body {
 }
 
 .backdrop {
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
@@ -413,6 +414,7 @@ body {
 }
 
 .scroll {
+  z-index: 1;
   padding: 0 20px;
   max-width: 1280px;
   width: 100%;
@@ -437,6 +439,7 @@ body {
   align-items: center;
   border-radius: 50%;
   background-color: var(--dark-text);
+  box-shadow: 0px 0px 11.8px 1px var(--light-text);
 }
 
 .scroll__icon {
